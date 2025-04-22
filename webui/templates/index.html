@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BirdNET Pi Dashboard</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid #ccc; padding: 0.5rem; }
+    </style>
+</head>
+<body>
+    <h1>Recent Bird Detections</h1>
+    <table>
+        <tr><th>Timestamp</th><th>Species</th><th>Confidence</th></tr>
+        {% for row in detections %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

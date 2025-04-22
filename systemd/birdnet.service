@@ -1,0 +1,12 @@
+[Unit]
+Description=BirdNET Pi
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/birdnet-pi/app/run.py
+Restart=always
+User=pi
+WorkingDirectory=/home/pi/birdnet-pi
+
+[Install]
+WantedBy=multi-user.target
